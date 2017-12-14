@@ -30,4 +30,5 @@ Please ensure that you have `grunt` installed locally: `npm install -g grunt`.
 2. Debugging Node.js Applications
     * Overview
         * There are many alternatives to use for debugging.  In this example, we're going to utilize VSCode for Debugging.
-        * In a 
+        * A great guide is located here: https://code.visualstudio.com/docs/editor/debugging.
+        * Please read and follow instructor for how to use.
