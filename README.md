@@ -19,6 +19,7 @@ Please ensure that you have `grunt` installed locally: `npm install -g grunt`.
 
 1. First Express Application
     * Overview
+        * Utilize **example_01_express_app**.
         * After `npm` has completed, execute and run the application: `grunt serve`
         * In a separate terminal or using Postman, interact with the cloud application by issuing a `curl localhost:9001/hello`.
             * This should return a JSON response to your caller:
@@ -29,6 +30,11 @@ Please ensure that you have `grunt` installed locally: `npm install -g grunt`.
         1. Add a new library and endpoint.  Ensure that you can call using the `curl` command.
 2. Debugging Node.js Applications
     * Overview
+        * Utilize **example_01_express_app**.
         * There are many alternatives to use for debugging.  In this example, we're going to utilize VSCode for Debugging.
         * A great guide is located here: https://code.visualstudio.com/docs/editor/debugging.
         * Please read and follow instructor for how to use.
+    * Tasks
+        * Utilizing the built in debugging, choose the debugger icon on the left.  
+        * Before starting the build, ensure that **_Launch Example 1_** is selected.  Hit start and the build should start.
+        * Set a breakpoint in the code.  Utilizing `curl localhost:9001/hello`, hit one of the endpoints.  VSCode should pause on the breakpoint and require you to continue.
