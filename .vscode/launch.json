@@ -12,6 +12,15 @@
       "env": {
           "FH_USE_LOCAL_DB":true
       }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Example 2",
+      "program": "${workspaceFolder}/example_02_find_bugs/application.js",
+      "env": {
+          "FH_USE_LOCAL_DB":true
+      }
     }
   ]
 }
