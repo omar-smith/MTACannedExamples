@@ -31,7 +31,7 @@ function bugOneRoute() {
       returnArray.push(value);
     });
 
-    return res.json(returnArray);
+    res.json(returnArray);
   });
 
   return bugOne;

@@ -69,7 +69,7 @@ docker rm mongo (or redis)
         * In order to start the build, use **_Launch Example 2_**
     * Tasks
         * Utilizing the debugging application, attempt to trace and find the bugs.  There are 3 bugs.
-            * #1 -- `curl localhost:8001/bug1` should return the following:
+            * #1 -- `curl localhost:8001/bug1` should return the following (note that curl defaults to GET):
             ```
             ["1","2","3","4"]
             ```
