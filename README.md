@@ -87,3 +87,12 @@ docker rm mongo (or redis)
         * Currently there are 10 unit tests located in test/unit.
         * In order to run tests, either run `grunt unit` or utilize the VS Code debugger and run **_Launch Example 3_**.
     * Tasks
+        1. Create unit tests for another endpoint library called `helloTwo`.  Place the unit test at the end of the file and name it:
+        ```
+        exports.it_should_test_helloTwo_UnitTestFunction = function(finish) {...
+        ```
+        2. Copy the current `test-hello.js` file and ensure that it's referencing the new endpoint library.  You should use an existing GET call for reference.
+        3. An expected response in the output should contain: 
+        ```
+        ✓ it_should_test_helloTwo_UnitTestFunction
+        ```
