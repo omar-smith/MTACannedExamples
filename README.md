@@ -75,7 +75,7 @@ docker rm mongo (or redis)
             ```
             * #2 -- `curl localhost:8001/bug2` should return the following:
             ```
-
+            [[1,2,3,4],["hi","there"]]
             ```
             * #3 -- `curl localhost:8001/bug3` should return the following:
             ```
