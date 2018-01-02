@@ -79,5 +79,11 @@ docker rm mongo (or redis)
             ```
             * #3 -- `curl localhost:8001/bug3` should return the following:
             ```
-
+            {"msg":"Hello World"}
             ```
+4. Utilizing Unit Tests
+    * Overview
+        * Utilize **example_03_unit_test**.
+        * Currently there are 10 unit tests located in test/unit.
+        * In order to run tests, either run `grunt unit` or utilize the VS Code debugger and run **_Launch Example 3_**.
+    * Tasks
