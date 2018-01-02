@@ -40,7 +40,7 @@ app.use(mbaasExpress.fhmiddleware());
 app.use('/hello', require('./lib/hello.js')());
 app.use('/bug1', require('./lib/bug1.js')());
 app.use('/bug2', require('./lib/bug2.js')());
-app.use('/bug3', require('./lib/bug3.js')());
+//app.use('/bug3', require('./lib/bug3.js')());  // Set up route and find bug.
 
 // Important that this is last!
 app.use(mbaasExpress.errorHandler());

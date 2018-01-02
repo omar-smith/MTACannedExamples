@@ -27,8 +27,6 @@ function helloRoute() {
     // see http://expressjs.com/4x/api.html#res.json
     res.json({msg: 'Hello ' + world});
   });
-
-  return hello;
 }
 
 module.exports = helloRoute;
