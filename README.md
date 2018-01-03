@@ -84,6 +84,7 @@ docker rm mongo (or redis)
 4. Utilizing Unit Tests
     * Overview
         * Utilize **example_03_unit_test**.
+        * Shows unit testing, how it's completed and allows student to create unit test themselves.
         * Currently there are 10 unit tests located in test/unit.
         * In order to run tests, either run `grunt unit` or utilize the VS Code debugger and run **_Launch Example 3_**.
     * Tasks
@@ -96,3 +97,8 @@ docker rm mongo (or redis)
         ```
         ✓ it_should_test_helloTwo_UnitTestFunction
         ```
+5.  RESTful Interfaces
+    * Overview
+        * Utilize **example_04_restful_interface**.
+        * 
+    * Tasks
