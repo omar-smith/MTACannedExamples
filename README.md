@@ -88,7 +88,7 @@ docker rm mongo (or redis)
         * Currently there are 10 unit tests located in test/unit.
         * In order to run tests run `grunt unit` from a terminal of your choosing.
     * Tasks
-        1. Create unit tests for endpoint library called `newLibrary`.  Place the unit test at the end of the file and name it:
+        1. Create unit tests for endpoint library called `newLibrary`.  Place the unit test file within `./test/unit/test-newLibrary.js`.
         2. Reference `./test/unit/test-hello.js` for how to structure your unit tests.
 5.  RESTful Interfaces
     * Overview
