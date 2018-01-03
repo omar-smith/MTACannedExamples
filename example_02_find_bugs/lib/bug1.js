@@ -17,7 +17,6 @@ function bugOneRoute() {
       returnArray.push(value);
     });
 
-    return res.json(returnArray);
   });
 
   // POST REST endpoint - note we use 'body-parser' middleware above to parse the request body in this route.
