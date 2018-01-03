@@ -23,6 +23,11 @@ function helloRoute() {
     res.json({msg: 'Removed last value in array.'});
   });
 
+  hello.put('/', function (req, res) {
+    restArray.length = 0;
+    res.json(restArray);
+  });
+
   return hello;
 }
 

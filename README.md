@@ -93,5 +93,21 @@ docker rm mongo (or redis)
 5.  RESTful Interfaces
     * Overview
         * Utilize **example_04_restful_interface**.
-        * 
+        * Things to keep in mind:
+            * GET — retrieve a particular resource’s object or list all objects
+            * POST — create a new resource’s object
+            * PATCH — make a partial update to a particular resource’s object
+            * PUT — completely overwrite a particular resource’s object
+            * DELETE — remove a particular resource’s object
     * Tasks
+        * Follow the script:
+            1. `curl http://localhost:8001/hello` - A GET which will return values associated with the class.
+            2. `curl -d '{"val":"2"}' -H "Content-Type: application/json" -X POST localhost:8001/hello` - A POST which allows you to send data in.
+                * Run subsequent `curl http://localhost:8001/hello` to validate values are stored.
+                * Advised to run more than once to add multiple values.
+            3. `curl -X DELETE localhost:8001/hello` - A DELETE which pops off the values at the end of the array.
+                * Run subsequent `curl http://localhost:8001/hello` to validate values are removed.
+            4. `curl -X PUT localhost:8001/hello` - A PUT which pops overwrites the array for every object..
+                * Run subsequent `curl http://localhost:8001/hello` to validate array is empty.
+            
+
