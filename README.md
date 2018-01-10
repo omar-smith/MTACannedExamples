@@ -44,7 +44,7 @@ docker rm mongo (or redis)
     * Overview
         * Utilize **example_01_express_app**.
         * After `npm` has completed, execute and run the application: `grunt serve`
-        * In a separate terminal or using Postman, interact with the cloud application by issuing a `curl localhost:9001/hello`.
+        * In a separate terminal or using Postman, interact with the cloud application by issuing a `curl localhost:8001/hello`.
             * This should return a JSON response to your caller:
             ```
             {"msg":"Hello World"}
@@ -61,7 +61,7 @@ docker rm mongo (or redis)
     * Tasks
         * Utilizing the built in debugging, choose the debugger icon on the left.  
         * Before starting the build, ensure that **_Launch Example 1_** is selected.  Hit start and the build should start.
-        * Set a breakpoint in the code.  Utilizing `curl localhost:9001/hello`, hit one of the endpoints.  VSCode should pause on the breakpoint and require you to continue.
+        * Set a breakpoint in the code.  Utilizing `curl localhost:8001/hello`, hit one of the endpoints.  VSCode should pause on the breakpoint and require you to continue.
 3. Debugging Node.js - Finding the Bugs
     * Overview
         * Utilize **example_02_find_bugs**.
