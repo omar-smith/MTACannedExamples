@@ -109,5 +109,17 @@ docker rm mongo (or redis)
                 * Run subsequent `curl http://localhost:8001/hello` to validate values are removed.
             4. `curl -X PUT localhost:8001/hello` - A PUT which pops overwrites the array for every object..
                 * Run subsequent `curl http://localhost:8001/hello` to validate array is empty.
-            
+6. Mongo DB Interaction
+    * Overview
+        * Utilize **example_05_mongo_db**.
+    * Tasks
+        1. Observe how the adding and reading record works.
+            * Add: `curl http://localhost:8001/db/add`
+            * Adds canned data to the database running locally.
+        2. Utilizing a query tool such as MongoHub (Pre-Compiled: https://mongohub.s3.amazonaws.com/MongoHub.zip), open and query the Mongo DB Container.
+            * Default Collection: `FH_LOCAL`
+            * Default Table: `myFirstEntity`
+        3. Once you have the guid, utilizing your endpoints, read from the database.
+            * Read: `curl http://localhost:8001/db/read/<guid>`
+        4. Utilzing the documentation, provide endpoints for `update (single field)` and `delete`. 
 

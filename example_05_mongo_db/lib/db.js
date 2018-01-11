@@ -30,16 +30,38 @@ function dbRoute() {
         };
         return res.status(400).json(error);
       } else {
-        console.log(JSON.stringify(data));
         return res.status(200).send('success');
       }
     });
   });
 
-  dbLib.post('/update', (req, res) => {
-    
+  dbLib.get('/read/:guid', (req, res) => {
+    var options = {
+      "act": "read",
+      "type": "myFirstEntity", // Entity/Collection name
+      "guid": req.params.guid // Row/Entry ID
+    };
+    $fh.db(options, function (err, data) {
+      if (err) {
+        console.error("Error " + err);
+        var error = {
+          "msg": "Error Processing Query",
+          "error":err
+        };
+        return res.status(400).json(error);
+      } else {
+        return res.status(200).json(data);
+      }
+    });
   });
 
+  dbLib.get('/update', (req, res) => {
+
+  });
+
+  dbLib.get('/delete', (req, res) => {
+
+  }); 
 
   return dbLib;
 }
