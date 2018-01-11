@@ -9,7 +9,7 @@ function dbRoute() {
   dbLib.use(bodyParser());
 
   dbLib.post('/add', (req, res) => {
-    var options = {
+    var payload = {
       "act": "create",
       "type": "myFirstEntity", // Entity/Collection name
       "fields": { // The structure of the entry/row data. A data is analogous to "Row" in MySql or "Documents" in MongoDB
@@ -21,13 +21,23 @@ function dbRoute() {
         "phone": "555-123456"
       }
     };
-    $fh.db(options, function (err, data) {
+    $fh.db(payload, function (err, data) {
       if (err) {
         console.error("Error " + err);
+        var error = {
+          "msg": "Error Processing Query",
+          "error":err
+        };
+        return res.status(400).json(error);
       } else {
         console.log(JSON.stringify(data));
+        return res.status(200).send('success');
       }
     });
+  });
+
+  dbLib.post('/update', (req, res) => {
+    
   });
 
 
