@@ -11,14 +11,15 @@ function dbRoute() {
   dbLib.post('/add', (req, res) => {
     var payload = {
       "act": "create",
-      "type": "myFirstEntity", // Entity/Collection name
+      "type": "myMTACollection", // Entity/Collection name
       "fields": { // The structure of the entry/row data. A data is analogous to "Row" in MySql or "Documents" in MongoDB
         "firstName": "Joe",
         "lastName": "Bloggs",
         "address1": "22 Blogger Lane",
         "address2": "Bloggsville",
         "country": "Bloggland",
-        "phone": "555-123456"
+        "phone": "555-123456",
+        "another": "record"
       }
     };
     $fh.db(payload, function (err, data) {
@@ -38,7 +39,7 @@ function dbRoute() {
   dbLib.get('/read/:guid', (req, res) => {
     var options = {
       "act": "read",
-      "type": "myFirstEntity", // Entity/Collection name
+      "type": "myMTACollection", // Entity/Collection name
       "guid": req.params.guid // Row/Entry ID
     };
     $fh.db(options, function (err, data) {
@@ -62,6 +63,10 @@ function dbRoute() {
   dbLib.get('/delete', (req, res) => {
 
   }); 
+  
+  dbLib.get('/list', (req, res) => {
+
+  });
 
   return dbLib;
 }

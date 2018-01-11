@@ -38,7 +38,8 @@ app.use(express.static(__dirname + '/public'));
 app.use(mbaasExpress.fhmiddleware());
 
 app.use('/hello', require('./lib/hello.js')());
-app.use('/db', require('./lib/db.js')());
+app.use('/fhdb', require('./lib/fHDB.js')());
+app.use('/mongodb', require('./lib/mongoDB.js')());
 
 // Important that this is last!
 app.use(mbaasExpress.errorHandler());
